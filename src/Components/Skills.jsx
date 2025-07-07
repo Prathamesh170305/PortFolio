@@ -36,7 +36,7 @@ const Skills = () => {
     },
     {
       name: 'Problem Solving',
-      icon: <img src="src/assets/icons8-problem-solving-64.png" alt="Problem Solving" style={{ height: 100, width: 100 }} />,
+      icon: <img src="/assets/icons8-problem-solving-64.png" alt="Problem Solving" style={{ height: 100, width: 100 }} />,
     },
     {
       name: 'C',
