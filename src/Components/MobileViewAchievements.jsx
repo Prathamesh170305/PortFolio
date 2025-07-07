@@ -1,9 +1,7 @@
-import React from 'react';
-import { Code, Award, Trophy, Star, GraduationCap, Target } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Code, Award, Trophy, GraduationCap } from 'lucide-react';
 import bgImage from '../assets/bg.png.png';
-import './Achievements.css'; // import CSS
-import { useEffect, useState } from 'react';
-
+import './Achievements.css';
 
 const achievements = [
   {
@@ -46,11 +44,9 @@ const Achievements = () => {
         clearInterval(interval);
         return prev;
       });
-    }, 700); // delay between cards
+    }, 700);
     return () => clearInterval(interval);
   }, []);
-
-
 
   return (
     <div className="min-h-screen bg-[#010532] relative overflow-hidden pt-16">
@@ -60,27 +56,9 @@ const Achievements = () => {
         style={{ backgroundImage: `url(${bgImage})` }}
       />
 
-      {/* Animated Stars Background */}
-      <div className="absolute inset-0">
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 3}s`
-            }}
-          >
-
-          </div>
-        ))}
-      </div>
-
       <div className="relative z-10 container mx-auto px-6 py-20 w-11/12">
         <div className="text-center mb-20">
-          <h1 className="text-[70px] font-extrabold text-white mb-4 font-manrope mt-[120px] h-[40px]">
+          <h1 className="text-[40px] font-extrabold text-white mb-4 font-manrope mt-[120px] h-[40px]">
             Achievements.
           </h1>
           <p className="text-white font-mono">
@@ -89,8 +67,7 @@ const Achievements = () => {
         </div>
 
         {/* Timeline Container */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 space-y-20 w-[750px]">
-
+        <div className="relative z-10 max-w-full mx-auto px-4 space-y-20">
           {/* Vertical Line */}
           <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-[2px] bg-white z-0 h-[1000px] " style={{ backgroundColor: 'white' }} />
 
@@ -100,36 +77,43 @@ const Achievements = () => {
             return (
               <div
                 key={item.id}
-                className={`flex items-center justify-between w-full ${item.position === "left" ? "flex-row" : "flex-row-reverse"
+                className={`flex items-center justify-between w-full ${item.position === 'left' ? 'flex-row' : 'flex-row-reverse'
                   } ${shouldShow ? 'timeline-card' : 'invisible'}`}
               >
                 {/* Card */}
-                <div className="w-[700px] h-[250px] rounded-[60px] overflow-hidden shadow-lg p-8 relative text-white font-manrope flex flex-col justify-between"
+                <div
+                  className="w-[300px] h-[150px] rounded-[35px] overflow-hidden shadow-lg p-8 relative text-white font-manrope flex flex-col justify-between gap-[1px]"
                   style={{
-                    background: `linear-gradient(to bottom right, #160B34, #3D11B2)`,
-                  }}>
-                  <h3 className="text-3xl font-semibold text-purple-300 mb-2 px-[30px] mt-[50px]" style={{ fontSize: 'xx-large' }}>{item.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed w-11/12 px-[30px] mb-[50px]">{item.description}</p>
+                    background: `linear-gradient(to bottom right, #160B34, #3D11B2)`
+                  }}
+                >
+                  <h2 className="font-semibold text-purple-300 px-[10px] justify-center h-[50px]" style={{ fontSize: '20px' }}>
+                    {item.title}
+                  </h2>
+                  <p className="text-gray-300 text-sm leading-relaxed w-11/12 px-[10px] mb-[30px] mx-[10px]" style={{ fontSize: '9px' }}>
+                    {item.description}
+                  </p>
                 </div>
 
                 {/* Line */}
-                <div className={`w-[50px] h-[2px] bg-white rounded-full ${!shouldShow && 'invisible'}`} style={{ backgroundColor: 'white' }} />
+                <div className="w-[50px] h-[2px] bg-white rounded-full" />
 
                 {/* Icon */}
-                <div className={`w-[100px] h-[50px] rounded-full bg-gradient-to-br from-purple-500 to-pink-500 border-4 border-white shadow-lg flex text-white z-10 justify-center items-center ${!shouldShow && 'invisible'}`} style={{ backgroundColor: 'black' }}>
-                  <p className='justify-center absolute' >{item.icon}</p>
+                <div className="w-[100px] h-[50px] rounded-full bg-gradient-to-br from-purple-500 to-pink-500 border-4 border-white shadow-lg flex text-white z-10 justify-center items-center" style={{ backgroundColor: 'black' }}>
+                  <p className="justify-center absolute">{item.icon}</p>
                 </div>
 
+                {/* Empty space for spacing */}
                 <div className="w-full md:w-5/12" />
               </div>
             );
           })}
-
         </div>
+      </div>
 
-      </div >
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#010532] to-transparent"></div>
-    </div >
+      {/* Bottom Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#010532] to-transparent" />
+    </div>
   );
 };
 

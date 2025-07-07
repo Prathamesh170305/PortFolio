@@ -16,24 +16,25 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1a1f2e] shadow-lg w-100/100 h-[70px] justify-center items-center">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1a1f2e] shadow-lg w-100/100 h-[70px] justify-center items-center opacity-70">
       <div className="w-full h-16 flex items-center justify-between px-8 mt-[18px]">
-        
+
         {/* Center Navigation Pills */}
         <div className="flex-1 flex justify-center gap-[40px]">
-          <div className="bg-[#2a3441] rounded-full p-1 flex items-center gap-[70px] text-white h-[30px] w-[700px] justify-center">
+          <div className="bg-[black] rounded-full p-1 flex items-center gap-[70px] text-white h-[30px] w-[700px] justify-center h-[40px]">
             {navItems.map((item) => (
+
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 text-white opacity-70 underline ${
-                  isActive(item.path)
+                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 text-white opacity-70 no-underline ${isActive(item.path)
                     ? 'bg-white text-gray-900 shadow-md'
                     : 'text-gray-300 hover:text-white hover:bg-[#3a4551]'
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
+
             ))}
           </div>
         </div>

@@ -2,9 +2,19 @@ import React from 'react';
 import { Code, Database, Brain, Cpu, Zap, Terminal, Bold } from 'lucide-react';
 import { IoLogoPython } from "react-icons/io5";
 import bgImage from '../assets/bg.png.png';
+import { useEffect, useState } from 'react';
+import { SiJavascript, SiMongodb, SiNextdotjs, SiReact } from 'react-icons/si';
 
 
 const Skills = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setAnimate(true), 100); // Trigger after a short delay
+  }, []);
+
+
+
   const skills = [
     {
       name: 'C++',
@@ -22,17 +32,38 @@ const Skills = () => {
     },
     {
       name: 'Data Structure',
-      icon: <img src="src\assets\hierarchical.png" alt="" style={{ height: 100, width: 100 }} />,
+      icon: <img src="src/assets/hierarchical.png" alt="Data Structure" style={{ height: 100, width: 100 }} />,
     },
     {
       name: 'Problem Solving',
-      icon: <img src="src\assets\icons8-problem-solving-64.png" alt="" style={{ height: 100, width: 100 }} />,
+      icon: <img src="src/assets/icons8-problem-solving-64.png" alt="Problem Solving" style={{ height: 100, width: 100 }} />,
     },
     {
       name: 'C',
-      icon: <img src="src\assets\icons8-c-programming-48.png" alt="" style={{ height: 100, width: 100 }} />,
+      icon: <img src="src/assets/icons8-c-programming-48.png" alt="C" style={{ height: 100, width: 100 }} />,
+    },
+    {
+      name: 'JavaScript',
+      icon: <SiJavascript style={{ height: 100, width: 100, color: '#f7df1e' }} />,
+    },
+    {
+      name: 'React.js',
+      icon: <SiReact style={{ height: 100, width: 100, color: '#61dafb' }} />,
+    },
+    {
+      name: 'Next.js',
+      icon: <SiNextdotjs style={{ height: 100, width: 100 }} />,
+    },
+    {
+      name: 'MongoDB',
+      icon: <SiMongodb style={{ height: 100, width: 100, color: '#4DB33D' }} />,
+    },
+    {
+      name: 'ML Algorithms',
+      icon: <img src="src\assets\deep-learning.png" alt="ML" style={{ height: 100, width: 100 }} />, // Add your icon here
     },
   ];
+
 
   return (
     <div className="min-h-screen bg-[#010532] relative overflow-hidden pt-16">
@@ -44,14 +75,18 @@ const Skills = () => {
         }}
       />
 
-      <div className="relative z-10 container mx-auto px-6 py-20 my-[250px]">
+      <div className="relative z-10 container mx-auto px-6 py-20 my-[250px] mt-[200px]">
         {/* Header Section */}
-        <div className="text-center mb-20">
-          <h1 className="text-6xl font-extrabold text-white mb-6 font-manrope" style={{ fontSize: 50 }}>
+        <div className={`text-center mb-20 transform transition-all duration-800 ease-out ${animate ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
+          }`}>
+          <h1 className={`text-6xl font-extrabold text-white mb-6 font-manrope ${animate ? 'animate-bounce-once' : ''
+            }`}>
             Skills.
           </h1>
-          <p className="text-6xl text-white max-w-2xl mx-auto font-['Manrope']" style={{ font: Bold, fontSize: 25 }}>
-            Elevate your development journey with my skill set
+
+          <p className={`text-6xl font-extrabold text-white mb-6 font-manrope ${animate ? 'animate-bounce-once' : ''
+            }`} style={{ font: Bold, fontSize: 25 }}>
+            Here's the development journey of my skill set
           </p>
           <br />
           <br />
@@ -62,10 +97,16 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-10 group cursor-pointer transform transition-all duration-300 hover:scale-105"
+              className={`flex flex-col items-center gap-10 group cursor-pointer transition-all duration-500 ease-out transform ${animate ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
+                }`}
+              style={{
+                transitionDelay: `${index * 100}ms`,
+              }}
             >
               {/* Icon Container */}
-              <div className="w-32 h-32 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-2xl flex items-center justify-center backdrop-blur-sm transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-purple-500/20 text-white">
+              <div className="w-32 h-32 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-2xl flex items-center justify-center backdrop-blur-sm transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-purple-500/20 text-white" style={{
+
+              }}>
                 {skill.icon}
               </div>
 
@@ -74,11 +115,13 @@ const Skills = () => {
               <div
                 className="min-w-[120px] h-16 rounded-xl flex items-center justify-center px-4 transition-all duration-300 group-hover:shadow-lg my-[30px]"
                 style={{
-                  background: 'linear-gradient(224deg, #160B34 0%, #3D11B2 100%)',
-                  boxShadow: '0px 0px 12px rgba(255, 255, 255, 0.66)',
+                  background: `linear-gradient(to bottom right, #160B34, #3D11B2)`,
+                  boxShadow: '-5px -5px 15px rgba(255, 255, 255, 0.5)',
+                  borderRadius: '10px',
+                  borderColor: 'white'
                 }}
               >
-                <span className="text-white text-xl font-extrabold font-['Manrope'] text-center leading-6 h-[60px] w-[150px] flex" style={{fontSize:23,justifyContent:'center',alignItems:'center'}}>
+                <span className="text-white text-xl font-extrabold  text-center leading-6 h-[60px] w-[150px] flex" style={{ fontSize: 23, justifyContent: 'center', alignItems: 'center', fontFamily: "Manrope" }}>
                   <p className='items-center justify-center flex'>{skill.name}</p>
                 </span>
               </div>
@@ -92,7 +135,7 @@ const Skills = () => {
         <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse opacity-80" />
         <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-purple-300 rounded-full animate-pulse opacity-50" />
       </div>
-    </div>
+    </div >
   );
 };
 

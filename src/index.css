@@ -11,7 +11,8 @@
 .text-white {
   color: #ffffff !important;
 }
-.font-bold{
+
+.font-bold {
   font-weight: 900;
 }
 
@@ -22,4 +23,39 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Manrope', sans-serif;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('fonts/Manrope-Regular.woff2') format('woff2'),
+    url('fonts/Manrope-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Place in your global CSS file or inside a <style> tag */
+.perspective {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+.group-hover\:rotate-y-180:hover {
+  transform: rotateY(180deg);
+}
+
+/* Add in your CSS */
+@keyframes bounce-once {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-bounce-once {
+  animation: bounce-once 0.8s ease-out forwards;
 }

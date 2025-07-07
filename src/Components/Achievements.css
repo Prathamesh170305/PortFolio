@@ -1,0 +1,15 @@
+/* Achievements.css */
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-card {
+  animation: slideInTop 0.8s ease forwards;
+}

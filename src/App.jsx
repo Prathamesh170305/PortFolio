@@ -1,12 +1,20 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
+import MobileViewNavbar from './Components/MobileViewNavbar'; // ✅ Import mobile navbar
+
 import Home from './Components/Home';
 import Skills from './Components/Skills';
 import Achievements from './Components/Achievements';
 import Contact from './Components/Contact';
 import Projects from './Components/Projects';
+
 import MobileViewHome from './Components/MobileViewHome';
+import MobileViewSkills from './Components/MobileViewSkills';
+import MobileViewAchievements from './Components/MobileViewAchievements';
+import MobileViewContact from './Components/MobileViewContact';
+import MobileViewProjects from './Components/MobileViewProjects';
+
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -18,20 +26,21 @@ function App() {
     };
 
     window.addEventListener('resize', handleResize);
-    
-    // Cleanup on unmount
+
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
     <>
-      <Navbar className="bg-white shadow-md p-4 w-full" />
+      {/* ✅ Render navbar based on screen size */}
+      {isMobile ? <MobileViewNavbar /> : <Navbar />}
+
       <Routes>
         <Route path="/" element={isMobile ? <MobileViewHome /> : <Home />} />
-        <Route path="/Skills" element={<Skills />} />
-        <Route path="/Achievements" element={<Achievements />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Projects" element={<Projects />} />
+        <Route path="/Skills" element={isMobile ? <MobileViewSkills /> : <Skills />} />
+        <Route path="/Achievements" element={isMobile ? <MobileViewAchievements /> : <Achievements />} />
+        <Route path="/Contact" element={isMobile ? <MobileViewContact /> : <Contact />} />
+        <Route path="/Projects" element={isMobile?<MobileViewProjects/>:<Projects />} />
       </Routes>
     </>
   );

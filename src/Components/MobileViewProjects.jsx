@@ -18,7 +18,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Air Booking System(Backend)",
+      title: "Air Booking System",
       description: "Developed a scalable microservice-based backend for an airline booking system, handling core functionalities like flight search, booking, and ticket management",
       accentColor: "#933DFF",
       gradientFrom: "#160B34",
@@ -36,7 +36,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Chat-Analyzer (Machine Learning)",
+      title: "Chat-Analyzer (ML)",
       description: "Developed an ML-powered Chat Analyzer that extracts insights from WhatsApp chats, providing sentiment analysis, message patterns, and user behavior trends",
       accentColor: "#933DFF",
       gradientFrom: "#160B34",
@@ -106,12 +106,13 @@ const Projects = () => {
               <div className="flex flex-col gap-6 relative">
                 <h1
                   className="text-[36px] font-extrabold leading-tight mx-[40px] py-[20px] relative"
-                  style={{ color: project.accentColor }}
+                  style={{ color: project.accentColor ,fontSize:'1.8rem', textAlign: 'center', lineHeight: '1.2' ,width: '60%',alignItems: 'center', marginLeft: 'auto', marginRight: 'auto' }}
                 >
                   {project.title}
                 </h1>
+                <br />
                 <div className='absolute mt-[190px]'>
-                  <p className="text-sm break-words text-blue-200 w-[400px] mx-[40px] mt-[1px] justify-center items-center relative">
+                  <p className="text-sm break-words text-blue-200 w-[400px] mx-[40px] mt-[1px] justify-center items-center relative" style={{ fontSize: '0.8rem', textAlign: 'center', lineHeight: '1.2' ,alignContent:'center',alignItems: 'center', marginLeft: 'auto', marginRight: 'auto' ,width:'80%',marginTop:'0px'}}>
                     {project.description}
                   </p>
                 </div>
