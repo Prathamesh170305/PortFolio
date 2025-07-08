@@ -78,9 +78,10 @@ const MobileViewNavbar = () => {
                                 to={item.path}
                                 onClick={() => setMenuOpen(false)}
                                 className={`px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 no-underline shadow-md min-w-[200px] text-center ${isActive(item.path)
-                                    ? 'bg-white text-gray-900 transform scale-105'
-                                    : 'bg-[#2a3441] text-gray-300 hover:bg-[#3a4551] hover:text-white hover:transform hover:scale-105'
+                                        ? 'bg-white text-[#f1f1f1] transform scale-105'
+                                        : 'bg-[#2a3441] text-[#f1f1f1] hover:bg-[#3a4551] hover:text-white hover:transform hover:scale-105'
                                     }`}
+
                                 style={{
                                     animationDelay: `${index * 0.1}s`,
                                 }}

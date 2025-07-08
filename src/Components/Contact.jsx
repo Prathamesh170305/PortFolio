@@ -48,7 +48,7 @@ const Contact = () => {
               <h2 className='text-white'>Instagram Handle</h2>
               <div className='flex'>
                 <Instagram className='text-white' onClick={instaHandler} />
-                <p className='text-white mx-[10px] text-[1.2rem]'>_aree_pratham_</p>
+                <p className='text-white mx-[10px] text-[1.2rem] mt-[0px]'>@_aree_pratham_</p>
               </div>
             </div>
 
@@ -57,7 +57,7 @@ const Contact = () => {
               <h2 className='text-white'>GitHub Account</h2>
               <div className='flex'>
                 <Github className='text-white h-[30px] w-[30px]' onClick={Githandler} />
-                <p className='text-white mx-[10px] text-[1.2rem]'>Prathamesh170305</p>
+                <p className='text-white mx-[10px] text-[1.2rem] mt-[5px]'>Prathamesh170305</p>
               </div>
             </div>
 
@@ -66,7 +66,7 @@ const Contact = () => {
               <h2 className='text-white'>LinkedIn Handle</h2>
               <div className='flex'>
                 <Linkedin className='text-white h-[30px] w-[30px]' onClick={LinkedInHandler} />
-                <p className='text-white mx-[10px] text-[1.2rem]'>Prathamesh Wankhde</p>
+                <p className='text-white mx-[10px] text-[1.2rem] mt-[7px]'>Prathamesh Wankhde</p>
               </div>
             </div>
 
@@ -75,7 +75,7 @@ const Contact = () => {
               <h2 className='text-white'>Gmail Account</h2>
               <div className='flex'>
                 <CgMail className='text-white h-[30px] w-[30px]' onClick={GmailHandler} />
-                <p className='text-white mx-[10px] text-[1.2rem]'>wankhadeprathamesh17@gmail.com</p>
+                <p className='text-white mx-[10px] text-[1.2rem] mt-[0px]'>wankhadeprathamesh17@gmail.com</p>
               </div>
             </div>
 
