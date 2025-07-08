@@ -20,7 +20,7 @@ const MobileView = () => {
     }, []);
 
     return (
-        <div className="block md:hidden relative w-full min-h-screen bg-[#010532] overflow-hidden">
+        <div className="block md:hidden relative w-full min-h-screen bg-[#010532] overflow-hidden h-[1000px]">
             {/* Background image */}
             <img
                 src={bgImage}

@@ -49,7 +49,7 @@ const Achievements = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#010532] relative overflow-hidden pt-16">
+    <div className="min-h-screen bg-[#010532] relative overflow-hidden pt-16 h-[1000px]">
       {/* Background Image */}
       <div
         className="absolute inset-0 w-full h-[2000px] bg-cover bg-center opacity-20"
@@ -90,7 +90,7 @@ const Achievements = () => {
                   <h2 className="font-semibold text-purple-300 px-[10px] justify-center h-[50px] mt-[20px]" style={{ fontSize: '18px',marginRight:'auto',marginLeft:'auto' }}>
                     {item.title}
                   </h2>
-                  <p className="text-gray-300 text-sm leading-relaxed w-11/12 px-[10px] mb-[50px] " style={{ fontSize: '9px',marginRight:'auto',marginLeft:'auto' }}>
+                  <p className="text-gray-300 text-sm leading-relaxed w-11/12 px-[10px] mb-[50px]" style={{ fontSize: '9px',marginRight:'auto',marginLeft:'auto',marginTop:'-7px' }}>
                     {item.description}
                   </p>
                 </div>
