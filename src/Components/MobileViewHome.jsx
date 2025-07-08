@@ -68,7 +68,7 @@ const MobileView = () => {
                         </div>
 
                         {/* Back Side */}
-                        <div className="mobile-flip-back bg-gradient-to-br from-[#160B34] to-[#3D11B2] p-6 flex flex-col justify-between rounded-[40px] h-full">
+                        <div className="mobile-flip-back bg-gradient-to-br from-[#160B34] to-[#3D11B2] p-6 flex flex-col justify-between rounded-[40px] h-[500px]">
                             <div className="flex flex-col gap-4">
                                 <h2 className="text-[#933DFF] text-[28px] font-extrabold font-[Manrope] text-center">Overview.</h2>
                                 <p className="text-white text-[12px] font-[Manrope] leading-relaxed text-justify"
