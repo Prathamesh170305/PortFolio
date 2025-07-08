@@ -4,6 +4,7 @@ import { FaSquareInstagram, FaPhone } from "react-icons/fa6";
 import { Github, Instagram, Linkedin } from 'lucide-react';
 import { CgMail } from "react-icons/cg";
 import './Contact.css';
+import footerImage from '../assets/Contact.png';
 
 const Contact = () => {
   function instaHandler() {
@@ -92,7 +93,7 @@ const Contact = () => {
 
       {/* Contact Image */}
       <div className='mt-[130px] mx-[50px] animate-fade-slide' style={{ animationDelay: '0.8s' }}>
-        <img src="src/assets/Contact.png" alt="Contact" />
+        <img src={footerImage} alt="Contact" />
       </div>
     </div>
   );
