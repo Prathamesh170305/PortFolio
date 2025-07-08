@@ -4,7 +4,7 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import { Github, Instagram, Linkedin } from 'lucide-react';
 import { CgMail } from "react-icons/cg";
 import { FaPhone } from "react-icons/fa6";
-
+import footerImage from '../assets/Contact.png';
 
 
 const Contact = () => {
@@ -89,7 +89,7 @@ const Contact = () => {
         </div>
       </div>
       <div className='mt-[40px] mb-[20px] mx-[24px] justify-center items-center'>
-        <img className="h-[380px] w-[350px] justify-center items-center"src="src\assets\Contact.png" alt="" />
+        <img className="h-[380px] w-[350px] justify-center items-center"src={footerImage} alt="" />
       </div>
     </div>
   )

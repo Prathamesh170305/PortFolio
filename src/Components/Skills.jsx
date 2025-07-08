@@ -1,10 +1,14 @@
-import React from 'react';
-import { Code, Database, Brain, Cpu, Zap, Terminal, Bold } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Database } from 'lucide-react';
 import { IoLogoPython } from "react-icons/io5";
-import bgImage from '../assets/bg.png.png';
-import { useEffect, useState } from 'react';
 import { SiJavascript, SiMongodb, SiNextdotjs, SiReact } from 'react-icons/si';
 
+// Importing images and background
+import bgImage from '../assets/bg.png.png';
+import dataStructureImg from '../assets/hierarchical.png';
+import problemSolvingImg from '../assets/icons8-problem-solving-64.png';
+import cLangImg from '../assets/icons8-c-programming-48.png';
+import mlAlgoImg from '../assets/deep-learning.png';
 
 const Skills = () => {
   const [animate, setAnimate] = useState(false);
@@ -18,9 +22,9 @@ const Skills = () => {
   const skills = [
     {
       name: 'C++',
-      icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+      icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" style={{ height: 100, width: 100 }}>
         <path fill="#00549d" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#0086d4" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#0075c0" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M31 21H33V27H31zM38 21H40V27H38z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M29 23H35V25H29zM36 23H42V25H36z" clip-rule="evenodd"></path>
-        className="w-16 h-16"</svg>,
+        </svg>,
     },
     {
       name: 'SQL',
@@ -32,15 +36,15 @@ const Skills = () => {
     },
     {
       name: 'Data Structure',
-      icon: <img src="src/assets/hierarchical.png" alt="Data Structure" style={{ height: 100, width: 100 }} />,
+      icon: <img src={dataStructureImg} alt="Data Structure" style={{ height: 100, width: 100 }} />,
     },
     {
       name: 'Problem Solving',
-      icon: <img src="/assets/icons8-problem-solving-64.png" alt="Problem Solving" style={{ height: 100, width: 100 }} />,
+      icon: <img src={problemSolvingImg} alt="Problem Solving" style={{ height: 100, width: 100 }} />,
     },
     {
       name: 'C',
-      icon: <img src="src/assets/icons8-c-programming-48.png" alt="C" style={{ height: 100, width: 100 }} />,
+      icon: <img src={cLangImg} alt="C" style={{ height: 100, width: 100 }} />,
     },
     {
       name: 'JavaScript',
@@ -60,7 +64,7 @@ const Skills = () => {
     },
     {
       name: 'ML Algorithms',
-      icon: <img src="src\assets\deep-learning.png" alt="ML" style={{ height: 100, width: 100 }} />, // Add your icon here
+      icon: <img src={mlAlgoImg} alt="ML" style={{ height: 100, width: 100 }} />,
     },
   ];
 
@@ -85,7 +89,7 @@ const Skills = () => {
           </h1>
 
           <p className={`text-6xl font-extrabold text-white mb-6 font-manrope ${animate ? 'animate-bounce-once' : ''
-            }`} style={{ font: Bold, fontSize: 25 }}>
+            }`} style={{ font: 'bold', fontSize: 25 }}>
             Here's the development journey of my skill set
           </p>
           <br />

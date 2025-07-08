@@ -96,7 +96,7 @@ const Achievements = () => {
                 </div>
 
                 {/* Line */}
-                <div className="w-[50px] h-[2px] bg-white rounded-full" />
+                <div className={`w-[50px] h-[2px] bg-white rounded-full ${!shouldShow && 'invisible'}`} style={{ backgroundColor: 'white' }} />
 
                 {/* Icon */}
                 <div className="w-[100px] h-[50px] rounded-full bg-gradient-to-br from-purple-500 to-pink-500 border-4 border-white shadow-lg flex text-white z-10 justify-center items-center" style={{ backgroundColor: 'black' }}>
