@@ -84,7 +84,7 @@ const Contact = () => {
               <h2 className='text-white'>Contact Number</h2>
               <div className='flex'>
                 <FaPhone className='text-white h-[25px] w-[25px]' />
-                <p className='text-white mx-[10px] text-[1.2rem]'>7378356674</p>
+                <p className='text-white mx-[10px] text-[1.2rem] mt-[0px]'>7378356674</p>
               </div>
             </div>
           </div>
