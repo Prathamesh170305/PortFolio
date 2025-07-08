@@ -28,7 +28,7 @@ const achievements = [
   {
     id: 4,
     title: 'Data Analytics',
-    description: 'Completed advanced data analytics certification with distinction, mastering statistical analysis and visualization techniques.',
+    description: 'Completed advanced data analytics certification (level 1) with distinction, mastering statistical analysis.',
     icon: <Award className="w-6 h-6" />,
     position: "right",
   }
@@ -62,7 +62,7 @@ const Achievements = () => {
             Achievements.
           </h1>
           <p className="text-white font-mono">
-            Development so far and seeking more increasing boundaries
+            Achivements so far and seeking more increasing boundaries
           </p>
         </div>
 
@@ -87,10 +87,10 @@ const Achievements = () => {
                     background: `linear-gradient(to bottom right, #160B34, #3D11B2)`
                   }}
                 >
-                  <h2 className="font-semibold text-purple-300 px-[10px] justify-center h-[50px]" style={{ fontSize: '20px' }}>
+                  <h2 className="font-semibold text-purple-300 px-[10px] justify-center h-[50px] mt-[20px]" style={{ fontSize: '18px',marginRight:'auto',marginLeft:'auto' }}>
                     {item.title}
                   </h2>
-                  <p className="text-gray-300 text-sm leading-relaxed w-11/12 px-[10px] mb-[30px] mx-[10px]" style={{ fontSize: '9px' }}>
+                  <p className="text-gray-300 text-sm leading-relaxed w-11/12 px-[10px] mb-[50px] " style={{ fontSize: '9px',marginRight:'auto',marginLeft:'auto' }}>
                     {item.description}
                   </p>
                 </div>
