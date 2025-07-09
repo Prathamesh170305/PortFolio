@@ -80,7 +80,7 @@ const Projects = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-20 w-11/12">
+      <div className="relative z-10 container mx-auto px-6 py-20 w-11/12 mt-[-50px]">
         {/* Header */}
         <div className="text-center mb-20">
           <h1 className="text-[70px] font-extrabold text-white mb-6 font-manrope mt-[150px]">

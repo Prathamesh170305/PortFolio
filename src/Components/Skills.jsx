@@ -90,7 +90,7 @@ const Skills = () => {
 
           <p className={`text-6xl font-extrabold text-white mb-6 font-manrope ${animate ? 'animate-bounce-once' : ''
             }`} style={{ font: 'bold', fontSize: 25 }}>
-            Here's the development journey of my skill set
+            "Continuously learning and adapting to new tech trends in web and AI development."
           </p>
           <br />
           <br />

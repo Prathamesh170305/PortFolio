@@ -20,7 +20,7 @@ const Home = () => {
 
     return (
         <div
-            className="relative w-full h-screen bg-[#010532] overflow-hidden shadow-[0px_24px_54.9px_rgba(0,0,0,0.75)] bg-cover bg-no-repeat bg-center justify-between"
+            className="relative w-full h-[1000px] bg-[#010532] overflow-hidden shadow-[0px_24px_54.9px_rgba(0,0,0,0.75)] bg-cover bg-no-repeat bg-center justify-between"
             style={{ backgroundImage: "url(https://placehold.co/1440x862)" }}
         >
 
@@ -100,7 +100,7 @@ const Home = () => {
                                 Overview.
                             </h2>
                             <p className="text-white text-[16px] font-normal font-[Manrope] my-[-20px]">
-"Upon commencing my academic journey in Computer Engineering, I cultivated a deep-rooted passion for programming, with a strong inclination toward algorithmic problem-solving and system design. My initial foray into development began with Android programming, which laid the groundwork for a broader exploration into web and mobile technologies. Over the past three years, I have gained substantial industry exposure through both full-time roles and freelance collaborations, delivering robust, scalable solutions across diverse domains. I possess proficient command over modern JavaScript frameworks, particularly React, React Native, and Next.js, and have consistently demonstrated the ability to translate complex requirements into seamless, high-performing user experiences."                            </p>
+"Upon commencing my academic journey in Computer Engineering, I cultivated a deep-rooted passion for programming, with a strong inclination toward algorithmic problem-solving and system design. My initial foray into development began with Android programming, which laid the groundwork for a broader exploration into web and mobile technologies. Over the past three years, I have gained substantial exposure through my work, delivering robust, scalable solutions across diverse domains. I possess proficient command over modern JavaScript frameworks, particularly React, React Native, and Next.js, and have consistently demonstrated the ability to translate complex requirements into seamless, high-performing user experiences."                            </p>
                         </div>
 
                         <FaArrowsRotate

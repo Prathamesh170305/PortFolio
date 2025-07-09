@@ -78,14 +78,14 @@ const Skills = () => {
         }}
       />
 
-      <div className="relative z-10 container mx-auto px-6 py-20 my-[250px]">
+      <div className="relative z-10 container mx-auto px-6 py-20 my-[250px] mt-[100px]">
         {/* Header Section */}
         <div className="text-center mb-20">
           <h1 className="text-6xl font-extrabold text-white mb-6 font-manrope" style={{ fontSize: 50 }}>
             Skills.
           </h1>
           <p className="text-6xl text-white max-w-2xl mx-auto font-['Manrope']" style={{ font: 'bold', fontSize: 25 }}>
-            Elevate your development journey with my skill set
+            "Continuously learning and adapting to new tech trends in web and AI development."
           </p>
           <br />
           <br />
